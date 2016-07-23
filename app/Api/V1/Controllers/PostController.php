@@ -2,6 +2,7 @@
 
 namespace App\Api\V1\Controllers;
 
+use App\Category;
 use JWTAuth;
 use App\Post;
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class PostController extends Controller
 
 	public function index()
 	{
-		return Post::all();
+		$posts = Post::all();
+		return $posts;
 	}
 
 	public function show($id)
@@ -36,8 +38,16 @@ class PostController extends Controller
 		$post->title = $request->get('title');
 		$post->description = $request->get('description');
 		$post->picture = $request->get('picture');
+		$post->link = $request->get('link');
+		$post->size = $request->get('size');
 
-		if ($post->save())
+		$category = Category::find($request->get('category_id'));
+		if (!$category)
+			return $this->response->error('category_not_found', 400);
+
+		$post->category_id = $category->id;
+
+		if ($category->posts()->save($post))
 			return $this->response->created();
 		else
 			return $this->response->error('could_not_create_post', 500);

@@ -2,6 +2,7 @@
 
 namespace App\Api\V1\Controllers;
 
+use App\Category;
 use JWTAuth;
 use App\Game;
 use App\Http\Requests;
@@ -35,10 +36,16 @@ class GameController extends Controller
 
 		$game->title = $request->get('title');
 		$game->description = $request->get('description');
+		$game->picture = $request->get('picture');
 		$game->link = $request->get('link');
 		$game->size = $request->get('size');
 
-		if ($game->save())
+		$category = Category::find($request->get('category_id'));
+		if (!$category)
+			return $this->response->error('category_not_found', 400);
+
+		$game->category_id = $category->id;
+		if ($category->posts()->save($game))
 			return $this->response->created();
 		else
 			return $this->response->error('could_not_create_game', 500);

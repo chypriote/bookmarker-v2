@@ -7,15 +7,17 @@ use Nanigans\SingleTableInheritance\SingleTableInheritanceTrait;
 
 class Post extends Model
 {
-	use SingleTableInheritanceTrait;
+//	use SingleTableInheritanceTrait;
 
-	protected $table = "posts";
+//	protected $table = "posts";
+//
+//	protected static $singleTableTypeField = 'type';
+//
+//	protected static $singleTableSubclasses = [Game::class, Plugin::class, Framework::class];
+//
+//	protected static $persisted = ['title', 'description', 'picture'];
 
-	protected static $singleTableTypeField = 'type';
-
-	protected static $singleTableSubclasses = [Game::class, Plugin::class, Framework::class];
-
-	protected static $persisted = ['title', 'description', 'picture'];
+	protected $fillable = ['title', 'description', 'picture', 'link', 'size'];
 
 	public function tags()
 	{

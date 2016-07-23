@@ -21,10 +21,16 @@ $api->version('v1', function ($api) {
 
 	//$api->group(['middleware' => 'api.auth'], function ($api) {
 	$api->group([], function ($api) {
+		$api->resource('categories', 'App\Api\V1\Controllers\CategoryController');
+		$api->get('categories/{id}/posts', 'App\Api\V1\Controllers\CategoryController@posts');
+		$api->get('categories/{id}/tags', 'App\Api\V1\Controllers\CategoryController@tags');
+
 		$api->resource('posts', 'App\Api\V1\Controllers\PostController');
-		$api->resource('games', 'App\Api\V1\Controllers\GameController');
-		$api->resource('plugins', 'App\Api\V1\Controllers\PluginController');
-		$api->resource('frameworks', 'App\Api\V1\Controllers\FrameworkController');
+
+//		$api->resource('games', 'App\Api\V1\Controllers\GameController');
+//		$api->resource('plugins', 'App\Api\V1\Controllers\PluginController');
+//		$api->resource('frameworks', 'App\Api\V1\Controllers\FrameworkController');
+		$api->resource('tags', 'App\Api\V1\Controllers\TagController');
 	});
 
 });

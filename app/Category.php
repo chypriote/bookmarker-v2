@@ -17,6 +17,6 @@ class Category extends Model
 
 	public function tags()
 	{
-		return $this->hasManyThrough('App\Tag', 'App\Post');
+		return $this->hasMany('App\Tag');
 	}
 }
