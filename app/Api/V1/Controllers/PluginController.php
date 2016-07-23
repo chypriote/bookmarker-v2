@@ -35,7 +35,7 @@ class PluginController extends Controller
 
 		$plugin->title = $request->get('title');
 		$plugin->description = $request->get('description');
-		$plugin->test = $request->get('test');
+		$plugin->link = $request->get('link');
 
 		if ($plugin->save())
 			return $this->response->created();

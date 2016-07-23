@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
 						$table->text('description');
 						$table->string('link');
 						$table->string('size');
-						$table->string('test');
+						$table->string('picture');
 						$table->string('category');
 
 

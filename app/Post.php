@@ -15,5 +15,5 @@ class Post extends Model
 
 		protected static $singleTableSubclasses = [Game::class, Plugin::class];
 
-    protected static $persisted = ['title', 'description'];
+    protected static $persisted = ['title', 'description', 'picture'];
 }

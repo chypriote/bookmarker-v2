@@ -7,5 +7,5 @@ class Plugin extends Post
 {
 	protected static $singleTableType = 'plugin';
 
-	protected static $persisted = ['test'];
+	protected static $persisted = ['link'];
 }
