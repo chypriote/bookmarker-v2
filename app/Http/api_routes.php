@@ -19,10 +19,12 @@ $api->version('v1', function ($api) {
 		return \App\User::all();
 	});
 
+	//$api->group(['middleware' => 'api.auth'], function ($api) {
 	$api->group([], function ($api) {
-			$api->resource('posts', 'App\Api\V1\Controllers\PostController');
-			$api->resource('games', 'App\Api\V1\Controllers\GameController');
+		$api->resource('posts', 'App\Api\V1\Controllers\PostController');
+		$api->resource('games', 'App\Api\V1\Controllers\GameController');
 		$api->resource('plugins', 'App\Api\V1\Controllers\PluginController');
+		$api->resource('frameworks', 'App\Api\V1\Controllers\FrameworkController');
 	});
 
 });
