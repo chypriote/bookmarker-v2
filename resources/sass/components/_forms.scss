@@ -1,0 +1,31 @@
+//TODO: passer ça dans les styles de pages
+form {
+	flex: 50% 0 0;
+}
+fieldset {
+	margin-bottom: 1rem;
+}
+label {
+	display: block;
+	margin: 0 0 .25rem;
+	color: $default-text-color;
+	font-weight: 700;
+}
+input, textarea {
+	width: 100%;
+	outline: 0;
+	-webkit-appearance: none;
+	padding: .5em 1em;
+	font-size: 1em;
+	background: $inverse-text;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	transition: color .1s ease,border-color .1s ease;
+	&:focus, &:active {box-shadow: 0 0 2px 0 rgba(0,0,0,.16),0 1px 2px 0 rgba(0,0,0,.12);}
+}
+	input[type="button"] {
+		background-color: $main-color;
+		color: $inverse-text;
+	}
+input[type="file"] {
+}

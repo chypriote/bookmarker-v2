@@ -26,7 +26,6 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('public/'))
 		.pipe(browserSync.reload({stream:true}));
 });
-
 gulp.task('fontawesome', function() {
 	gulp.src('resources/sass/vendors/font-awesome/fonts/*')
 		.pipe(gulp.dest('public/fonts/'));
@@ -70,8 +69,19 @@ gulp.task('uglify',['browserify'], function() {
 		.pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('views', function() {
+	gulp.src('resources/app/views/**/*.html')
+		.pipe(gulp.dest('public/views/'))
+		.pipe(browserSync.reload({stream:true}));
+});
+gulp.task('templates', function() {
+	gulp.src('resources/app/components/**/*.html')
+		.pipe(gulp.dest('public/templates/'))
+		.pipe(browserSync.reload({stream:true}));
+});
+
 gulp.task('build', function() {
-    runSequence(['styles', 'fontawesome', 'uglify']);
+    runSequence(['styles', 'fontawesome', 'views', 'templates', 'uglify']);
 });
 
 gulp.task('reload', function() {
@@ -87,7 +97,7 @@ gulp.task('serve', function () {
 gulp.task('watch', function() {
     gulp.watch('resources/app/**/*.js', ['uglify']);
     gulp.watch('resources/sass/**/*.scss', ['styles']);
-    gulp.watch('resources/app/**/*.html', ['reload']);
+    gulp.watch('resources/app/**/*.html', ['templates', 'views']);
 		gulp.watch('resources/views/**/*.php', ['reload']);
 });
 

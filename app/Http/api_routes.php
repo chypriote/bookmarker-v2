@@ -31,6 +31,7 @@ $api->version('v1', function ($api) {
 //		$api->resource('plugins', 'App\Api\V1\Controllers\PluginController');
 //		$api->resource('frameworks', 'App\Api\V1\Controllers\FrameworkController');
 		$api->resource('tags', 'App\Api\V1\Controllers\TagController');
+		$api->get('tags/{id}/posts', 'App\Api\V1\Controllers\TagController@posts');
 	});
 
 });

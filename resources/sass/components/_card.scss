@@ -1,0 +1,9 @@
+.card {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	position: relative;
+	margin: 1rem 0;
+	padding: 1em;
+	background-color: #fff;
+	transition: box-shadow .25s;
+	border-radius: 2px;
+}

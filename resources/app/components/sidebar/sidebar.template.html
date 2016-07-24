@@ -1,0 +1,27 @@
+<aside class="sidebar">
+	<header class="sidebar-logo">
+		<div class="logo-title">Bookmarker <span>2</span></div>
+		<div class="logo-subtitle">A massive database of things</div>
+	</header>
+	<nav class="sidebar-nav">
+		<div class="sidebar-categories">
+			<a ui-sref="category.tag({slug:'web'})" ui-sref-active="active" class="category-selector">
+				<i class="fa fa-code"></i> Web
+			</a>
+			<a ui-sref="category.tag({slug:'games'})" ui-sref-active="active" class="category-selector">
+				<i class="fa fa-gamepad"></i> Games
+			</a>
+			<a ui-sref="category.tag({slug:'plugins'})" ui-sref-active="active" class="category-selector">
+				<i class="fa fa-cubes"></i> Plugins
+			</a>
+		</div>
+		<div class="sidebar-tags">
+			<a class="tag-selector" ui-sref="category.tag({tag:'all'})" ui-sref-active="active">everything</a>
+			<a class="tag-selector" ui-sref="category.tag({tag:'test'})" ui-sref-active="active">test</a>
+			<a class="tag-selector" ui-sref="category.tag({tag:'domino'})" ui-sref-active="active">domino</a>
+		</div>
+	</nav>
+	<footer class="sidebar-footer">
+		by <a href="cv.chypriote.me">ChypRiotE</a>
+	</footer>
+</aside>

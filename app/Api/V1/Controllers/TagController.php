@@ -68,4 +68,15 @@ class TagController extends Controller
 		else
 			return $this->response->error('could_not_delete_tag', 500);
 	}
+
+	public function posts($id)
+	{
+		$tag = Tag::where('slug', $id)->first();
+		$posts = $tag->posts()->get();
+
+		if(!$tag)
+			return $this->response->error('could_not_find_category', 400);
+
+		return $posts;
+	}
 }

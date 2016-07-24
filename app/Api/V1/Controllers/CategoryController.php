@@ -73,7 +73,7 @@ class CategoryController extends Controller
 
 	public function posts($id)
 	{
-		$category = Category::find($id);
+		$category = Category::where('slug', $id)->first();
 		$posts = $category->posts()->get();
 
 		if(!$category)

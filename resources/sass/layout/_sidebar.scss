@@ -3,6 +3,7 @@
 	flex-direction: column;
 	height: 100vh;
 	background: $default-text-color;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 // Bloc logo
@@ -17,10 +18,10 @@
 }
 .logo-title {
 	color: $inverse-text;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	line-height: 1.2;
 	font-weight: 700;
-	> span {font-size: 1.3em;}
+	> span {font-size: 1.2em;}
 }
 .logo-subtitle {
 	color: $lighter-text;
@@ -56,6 +57,7 @@
 		text-transform: capitalize;
 		border-left: 4px solid transparent;
 		transition: all .5s ease;
+		cursor: pointer;
 		.fa {font-size: 2em;}
 		&:hover {color: $inverse-text;}
 		&.active {
@@ -67,6 +69,7 @@
 }
 .sidebar-tags {
 	flex-grow: 1;
+	min-width: 10rem;
 	.tag-selector {
 		display: flex;
 		color: $lighter-text;
