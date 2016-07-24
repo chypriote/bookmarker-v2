@@ -1,0 +1,86 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background: $default-text-color;
+}
+
+// Bloc logo
+.sidebar-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $dark-text;
+	padding: $header-top-padding;
+	height: $header-height;
+	text-transform: uppercase;
+}
+.logo-title {
+	color: $inverse-text;
+	font-size: 1.8em;
+	line-height: 1.2;
+	font-weight: 700;
+	> span {font-size: 1.3em;}
+}
+.logo-subtitle {
+	color: $lighter-text;
+	font-size: .7em;
+}
+
+// Footer
+.sidebar-footer {
+	padding: $header-top-padding 2rem;
+	background-color: $dark-text;
+	color: $lighter-text;
+	text-align: right;
+	a {
+		color: $inverse-text;
+		&:hover {text-decoration: underline;}
+	}
+}
+
+// Nav right
+.sidebar-nav {
+	display: flex;
+	flex-grow: 1;
+}
+.sidebar-categories {
+	background: $light-text;
+	.category-selector {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 1.5rem;
+		color: $lighter-text;
+		text-transform: capitalize;
+		border-left: 4px solid transparent;
+		transition: all .5s ease;
+		.fa {font-size: 2em;}
+		&:hover {color: $inverse-text;}
+		&.active {
+			background-color: $default-text-color;
+			color: $inverse-text;
+			border-color: $accent-color;
+		}
+	}
+}
+.sidebar-tags {
+	flex-grow: 1;
+	.tag-selector {
+		display: flex;
+		color: $lighter-text;
+		font-size: .9em;
+		padding: .25em 1rem;
+		margin: .25em 0;
+		transition: color .5s ease, background-color .5s ease;
+		cursor: pointer;
+		width: 100%;
+		&:before{content: '#';}
+		&:hover {color: $inverse-text;}
+		&.active {
+			background-color: $accent-color;
+			color: $dark-text;
+		}
+	}
+}

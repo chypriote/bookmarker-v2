@@ -1,0 +1,73 @@
+.button {
+	display: flex;
+	outline: none;
+	align-items: center;
+	width: auto;
+	padding: .5rem 1rem;
+	cursor: pointer;
+	border-radius: 40px;
+	background: $main-color;
+	color: $inverse-text;
+	&:hover {background: $lighter-main-color;}
+	&:active, &:focus {background: $darker-main-color;}
+	&:disabled {cursor: not-allowed;}
+	&.\--accented {
+		background: $accent-color;
+		color: $default-text-color;
+		&:hover {background: $lighter-accent-color;}
+		&:active, &:focus {background: $darker-accent-color;}
+	}
+	&.\--secondary {
+		background: $secondary-color;
+		color: $default-text-color;
+		&:hover {background: $lighter-secondary-color;}
+		&:active, &:focus {background: $darker-secondary-color;}
+	}
+	&.\--tertiary {
+		background: $tertiary-color;
+		&:hover {background: $lighter-tertiary-color;}
+		&:active, &:focus {background: $darker-tertiary-color;}
+	}
+}
+
+.icon-button {
+	display: flex;
+	outline: none;
+	align-items: center;
+	width: auto;
+	padding: .5rem 1.5rem .5rem 1rem;
+	cursor: pointer;
+	border-radius: 40px;
+	background: $main-color;
+	color: $inverse-text;
+	&:hover {background: $lighter-main-color;}
+	&:active, &:focus {background: $darker-main-color;}
+	&:disabled {cursor: not-allowed;}
+	.fa {
+		font-size: 1.2em;
+		border-radius: 100%;
+		background: rgba(0,0,0,.25);
+		width: 30px;
+		height: 30px;
+		line-height: 1.6;
+		margin-left: -5px;
+		margin-right: .5rem;
+	}
+	&.\--accented {
+		background: $accent-color;
+		color: $default-text-color;
+		&:hover {background: $lighter-accent-color;}
+		&:active, &:focus {background: $darker-accent-color;}
+	}
+	&.\--secondary {
+		background: $secondary-color;
+		color: $default-text-color;
+		&:hover {background: $lighter-secondary-color;}
+		&:active, &:focus {background: $darker-secondary-color;}
+	}
+	&.\--tertiary {
+		background: $tertiary-color;
+		&:hover {background: $lighter-tertiary-color;}
+		&:active, &:focus {background: $darker-tertiary-color;}
+	}
+}
