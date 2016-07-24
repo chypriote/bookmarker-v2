@@ -27,6 +27,18 @@ gulp.task('styles', function() {
 		.pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('fontawesome', function() {
+	gulp.src('resources/sass/vendors/font-awesome/fonts/*')
+		.pipe(gulp.dest('public/fonts/'));
+	gulp.src('resources/sass/vendors/font-awesome/font-awesome.scss')
+		.pipe(g.sass())
+		.pipe(g.autoprefixer('last 2 versions'))
+		.pipe(g.rename({suffix: '.min'}))
+		.pipe(g.cssnano())
+		.pipe(gulp.dest('public/'))
+		.pipe(browserSync.reload({stream:true}));
+});
+
 gulp.task('lint', function() {
 	gulp.src('resources/app/**/*.js')
 		.pipe(g.plumber({
@@ -59,7 +71,7 @@ gulp.task('uglify',['browserify'], function() {
 });
 
 gulp.task('build', function() {
-    runSequence(['styles', 'uglify']);
+    runSequence(['styles', 'fontawesome', 'uglify']);
 });
 
 gulp.task('reload', function() {
