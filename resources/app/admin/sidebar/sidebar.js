@@ -4,6 +4,6 @@ module.exports = /*@ngInject*/function () {
 	return {
 		controller: 'sidebarController',
 		controllerAs: 'sidebar',
-		templateUrl: 'templates/sidebar/sidebar.template.html'
+		templateUrl: 'main/components/sidebar/sidebar.template.html'
 	}
 }

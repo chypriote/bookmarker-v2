@@ -10,6 +10,7 @@
 <body>
 	{{--Sidebar--}}
 	<sidebar></sidebar>
+	<admin-sidebar></admin-sidebar>
 	{{--Main--}}
 	<div class="content">
 		{{--Navbar--}}
@@ -33,7 +34,6 @@
 		{{--Vue--}}
 		<main class="view" ui-view>
 			<div class="container">
-				<div class="title">Laravel 5</div>
 				<ui-view></ui-view>
 			</div>
 		</main>

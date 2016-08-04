@@ -4,6 +4,6 @@ module.exports = /*@ngInject*/function () {
 	return {
 		controller: 'viewHeaderController',
 		controllerAs: 'vheader',
-		templateUrl: 'templates/view_header/viewHeader.template.html'
+		templateUrl: 'main/components/view_header/viewHeader.template.html'
 	}
 }

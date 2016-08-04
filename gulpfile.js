@@ -69,14 +69,9 @@ gulp.task('uglify',['browserify'], function() {
 		.pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('views', function() {
-	gulp.src('resources/app/views/**/*.html')
-		.pipe(gulp.dest('public/views/'))
-		.pipe(browserSync.reload({stream:true}));
-});
 gulp.task('templates', function() {
-	gulp.src('resources/app/components/**/*.html')
-		.pipe(gulp.dest('public/templates/'))
+	gulp.src('resources/app/**/*.html')
+		.pipe(gulp.dest('public/'))
 		.pipe(browserSync.reload({stream:true}));
 });
 
