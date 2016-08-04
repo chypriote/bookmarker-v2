@@ -23,12 +23,17 @@ angular.module('bookmarker', ['ui.router'])
 			})
 			.state('category', {
 				url: '/{slug}',
-				template: 'Hello les copains'
+				abstract: true
+			})
+			.state('category.all', {
+				url: '',
+				templateUrl: 'views/default.html'
 			})
 			.state('category.tag', {
 				url: '/{tag}',
-				template: 'Tag {tag}'
+				templateUrl: 'views/default.html'
 			})
 	})
 
 require('./components/sidebar')
+require('./components/view_header/')
