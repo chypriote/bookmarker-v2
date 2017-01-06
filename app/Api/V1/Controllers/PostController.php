@@ -18,7 +18,7 @@ class PostController extends Controller
 	public function index()
 	{
 		$posts = Post::all();
-		return $posts;
+		return json_encode($posts);
 	}
 
 	public function show($id)
@@ -28,7 +28,7 @@ class PostController extends Controller
 		if(!$post)
 			throw new NotFoundHttpException;
 
-		return $post;
+		return json_encode($post);
 	}
 
 	public function store(Request $request)

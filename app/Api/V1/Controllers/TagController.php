@@ -16,7 +16,7 @@ class TagController extends Controller
 
 	public function index()
 	{
-		return Tag::all();
+		return json_encode(Tag::all());
 	}
 
 	public function show($id)
@@ -26,7 +26,7 @@ class TagController extends Controller
 		if(!$tag)
 			throw new NotFoundHttpException;
 
-		return $tag;
+		return json_encode($tag);
 	}
 
 	public function store(Request $request)

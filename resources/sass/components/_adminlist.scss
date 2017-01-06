@@ -1,0 +1,21 @@
+
+.admin-categories, .admin-tags {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	flex: 20% 0;
+}
+
+.admin-form {
+	flex: 70% 0;
+}
+
+.vertical-list {
+	overflow: scroll;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid grey;
+	padding: .25em;
+	max-height: 100%;
+}

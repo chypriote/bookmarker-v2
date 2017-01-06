@@ -16,7 +16,7 @@ class PluginController extends Controller
 
 	public function index()
 	{
-		return Plugin::all();
+		return json_encode(Plugin::all());
 	}
 
 	public function show($id)
@@ -26,7 +26,7 @@ class PluginController extends Controller
 		if(!$plugin)
 			throw new NotFoundHttpException;
 
-		return $plugin;
+		return json_encode($plugin);
 	}
 
 	public function store(Request $request)

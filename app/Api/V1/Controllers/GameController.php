@@ -17,7 +17,7 @@ class GameController extends Controller
 
 	public function index()
 	{
-		return Game::all();
+		return json_encode(Game::all());
 	}
 
 	public function show($id)
@@ -27,7 +27,7 @@ class GameController extends Controller
 		if(!$game)
 			throw new NotFoundHttpException;
 
-		return $game;
+		return json_encode($game);
 	}
 
 	public function store(Request $request)

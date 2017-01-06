@@ -76,7 +76,7 @@ gulp.task('templates', function() {
 });
 
 gulp.task('build', function() {
-    runSequence(['styles', 'fontawesome', 'views', 'templates', 'uglify']);
+    runSequence(['styles', 'fontawesome', 'templates', 'uglify']);
 });
 
 gulp.task('reload', function() {
@@ -92,7 +92,7 @@ gulp.task('serve', function () {
 gulp.task('watch', function() {
     gulp.watch('resources/app/**/*.js', ['uglify']);
     gulp.watch('resources/sass/**/*.scss', ['styles']);
-    gulp.watch('resources/app/**/*.html', ['templates', 'views']);
+    gulp.watch('resources/app/**/*.html', ['templates']);
 		gulp.watch('resources/views/**/*.php', ['reload']);
 });
 

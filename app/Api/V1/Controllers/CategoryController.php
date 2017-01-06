@@ -16,7 +16,9 @@ class CategoryController extends Controller
 
 	public function index()
 	{
-		return Category::all();
+		$categories = Category::all();
+
+		return json_encode($categories);
 	}
 
 	public function show($id)
@@ -26,7 +28,7 @@ class CategoryController extends Controller
 		if(!$category)
 			throw new NotFoundHttpException;
 
-		return $category;
+		return json_encode($category);
 	}
 
 	public function store(Request $request)

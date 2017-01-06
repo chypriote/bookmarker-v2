@@ -3,10 +3,11 @@
 module.exports = /*@ngInject*/function ($http) {
 	var vm = this
 
-	$http.get('categories')
-		.then(function (data) {
-			vm.categories = data.response
-		}, function (data) {
-			console.log(data)
+	$http.get('api/categories')
+		.then(function (response) {
+			vm.categories = response.data
+			console.log(vm.categories)
+		}, function (response) {
+			console.log(response)
 		})
 }

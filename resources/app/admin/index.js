@@ -12,11 +12,11 @@ angular.module('bookmarker.admin', ['ui.router'])
 			})
 			.state('admin.categories', {
 				url: '/categories',
-				template: 'Admin categories'
+				templateUrl: 'admin/_views/categories.html'
 			})
 			.state('admin.post', {
 				url: '/post',
-				template: 'New post'
+				templateUrl: 'admin/_views/new-post.html'
 			})
 	})
 

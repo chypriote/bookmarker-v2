@@ -1,0 +1,60 @@
+<div class="card admin-categories">
+	<header>
+		<button class="button" ng-click="adding = !adding">Add category</button>
+	</header>
+	<section class="vertical-list">
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+	</section>
+</div>
+<div class="card admin-tags" ng-show="!adding">
+	<header>
+		<input type="text" name="add-tag" placeholder="Add Tag">
+	</header>
+	<section class="vertical-list">
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+		<a href="#">Web</a>
+		<a href="#">Games</a>
+	</section>
+</div>
+<div class="card admin-form" ng-show="adding">
+	<form name="addCategory">
+		<input type="text" name="Name" value="" placeholder="Name">
+		<!-- Ce champs est disabled et affiche le slug calculé par le controller -->
+		<input type="text" name="Slug" value="" placeholder="Slug" disabled>
+		<!-- Champs color picker -->
+		<input type="text" name="Color" value="" placeholder="Color">
+		<input type="text" name="Icon" value="" placeholder="Icon">
+		<button type="submit" class="button">Enregistrer</button>
+	</form>
+</div>

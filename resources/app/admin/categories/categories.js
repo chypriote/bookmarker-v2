@@ -3,7 +3,7 @@
 module.exports = /*@ngInject*/function () {
 	return {
 		controller: 'categoriesController',
-		controllerAs: 'categories',
+		controllerAs: 'catlist',
 		templateUrl: 'templates/admin/categories/categories.template.html'
 	}
 }

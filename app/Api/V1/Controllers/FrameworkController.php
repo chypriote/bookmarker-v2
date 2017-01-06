@@ -16,7 +16,7 @@ class FrameworkController extends Controller
 
 	public function index()
 	{
-		return Framework::all();
+		return json_encode(Framework::all());
 	}
 
 	public function show($id)
@@ -26,7 +26,7 @@ class FrameworkController extends Controller
 		if(!$framework)
 			throw new NotFoundHttpException;
 
-		return $framework;
+		return json_encode($framework);
 	}
 
 	public function store(Request $request)
