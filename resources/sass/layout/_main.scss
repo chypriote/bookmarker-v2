@@ -1,3 +1,7 @@
+html {
+	overflow-y: initial;
+}
+
 .view {
 	height: calc(100vh - 5rem);
 }
@@ -35,5 +39,5 @@
 	display: flex;
 	flex-wrap: wrap;
 	height: calc(100vh - 10rem);
-	overflow: scroll;
+	overflow-y: scroll;
 }
